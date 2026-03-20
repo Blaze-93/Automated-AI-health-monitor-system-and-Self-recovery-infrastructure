@@ -72,7 +72,7 @@ Open `main.py`, find `MODULES`, and uncomment the matching example.
 
 ### If their module is a FastAPI / uvicorn service → use `"http"`
 
-**Tell them to add one route:**
+**add one route:**
 ```python
 @app.get("/health")
 def health():
@@ -100,7 +100,7 @@ uvicorn their_app:app --port 8001
 
 ### If their module is a plain Python script → use `"pidfile"`
 
-**Tell them to add 2 lines at the very top of their script:**
+**add 2 lines at the very top of their script:**
 ```python
 import os
 os.makedirs("pids", exist_ok=True); open("pids/their_script.pid", "w").write(str(os.getpid()))
